@@ -12,7 +12,6 @@ class Matches extends StatefulWidget {
   State<Matches> createState() => _MatchesState();
 }
 
-//added  TickerProviderStateMixin for navigating the tabs
 class _MatchesState extends State<Matches> with TickerProviderStateMixin {
   late TabController _tabController;
 
@@ -91,8 +90,7 @@ class _MatchesState extends State<Matches> with TickerProviderStateMixin {
                             image: DecorationImage(
                               image: AssetImage(
                                   'assets/background/background.png'),
-                              fit: BoxFit
-                                  .cover, // Adjust this based on how you want the image to fit
+                              fit: BoxFit.cover,
                             ),
                           ),
                           padding: const EdgeInsets.symmetric(

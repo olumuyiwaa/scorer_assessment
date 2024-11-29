@@ -59,7 +59,6 @@ class PenaltyShootoutCard extends StatelessWidget {
               ],
             ),
           ),
-          // Content
           Padding(
             padding: const EdgeInsets.only(left: 16, top: 20, bottom: 20),
             child: Row(
@@ -87,7 +86,6 @@ class PenaltyShootoutCard extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(width: 8),
-                // Penalty Shootout Details
                 Expanded(
                   child: Container(
                     decoration: const BoxDecoration(
@@ -96,8 +94,8 @@ class PenaltyShootoutCard extends StatelessWidget {
                         end: Alignment.bottomCenter,
                         stops: [0.5, 0.5],
                         colors: [
-                          Color(0XFFFFF4CE), // Top half
-                          Color(0XFFFFBDC7), // Bottom half
+                          Color(0XFFFFF4CE),
+                          Color(0XFFFFBDC7),
                         ],
                       ),
                     ),

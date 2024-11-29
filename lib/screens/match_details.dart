@@ -24,7 +24,6 @@ class MatchDetails extends StatefulWidget {
   State<MatchDetails> createState() => _MatchDetailsState();
 }
 
-//added  TickerProviderStateMixin for navigating the tabs
 class _MatchDetailsState extends State<MatchDetails>
     with TickerProviderStateMixin {
   late TabController _tabController;
@@ -46,7 +45,7 @@ class _MatchDetailsState extends State<MatchDetails>
 
   void _bottomNavTapped(int index) {
     setState(() {
-      _currentPageIndex = index; // Update the page index
+      _currentPageIndex = index;
     });
   }
 
@@ -56,6 +55,10 @@ class _MatchDetailsState extends State<MatchDetails>
       providers: [
         BlocProvider<MatchBloc>(
           create: (context) => MatchBloc()..add(FetchMatchDetails()),
+        ),
+        BlocProvider<PlayerImageBloc>(
+          create: (context) =>
+              PlayerImageBloc()..add(FetchPlayerImageDetails()),
         ),
         BlocProvider<IncidentBloc>(
           create: (context) => IncidentBloc()..add(FetchIncidentsData()),
@@ -112,8 +115,7 @@ class _MatchDetailsState extends State<MatchDetails>
                                     image: DecorationImage(
                                       image: AssetImage(
                                           'assets/background/match_details_background.png'),
-                                      fit: BoxFit
-                                          .cover, // Adjust this based on how you want the image to fit
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                   padding: const EdgeInsets.symmetric(

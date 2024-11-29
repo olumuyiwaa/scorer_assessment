@@ -146,9 +146,7 @@ class IncidentBloc extends Bloc<IncidentEvent, IncidentState> {
 
 //player image
 class PlayerImageBloc extends Bloc<PlayerImageEvent, PlayerImageState> {
-  final String baseUrl;
-
-  PlayerImageBloc({required this.baseUrl}) : super(const PlayerImageState()) {
+  PlayerImageBloc() : super(const PlayerImageState()) {
     on<FetchPlayerImageDetails>(_onFetchPlayerImageDetails);
   }
 
