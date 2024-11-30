@@ -48,7 +48,8 @@ This project implements the **Match Details Screen**  based on the provided desi
 ### Prerequisites
 
 - Install [Flutter](https://flutter.dev/) or relevant environment.
-- Ensure `node` or other dependencies (if applicable) are installed.
+- Install Android studio or VSCode to edit, modify and compile for Android
+- Install XCode for compiling to IOS
 
 ### Installation Steps
 
@@ -60,32 +61,3 @@ This project implements the **Match Details Screen**  based on the provided desi
 -  fl_chart: ^0.69.2
 -  flutter_bloc: ^8.1.6
 -  equatable: ^2.0.7
-
-3.   Assets used:
-    - assets/icons/home.svg
-    - assets/icons/matches.svg
-    - assets/icons/fantasy.svg
-    - assets/icons/shop.svg
-    - assets/icons/user.svg
-    - assets/icons/time.svg
-    - assets/icons/ball.svg
-    - assets/icons/clock.svg
-    - assets/icons/location.svg
-    - assets/icons/calender.svg
-    - assets/icons/referee.svg
-    - assets/icons/stadium.svg
-    - assets/icons/scored.png
-    - assets/icons/missed.png
-    - assets/icons/yellow.png
-    - assets/icons/second_yellow_card.png
-    - assets/icons/red_card.png
-    - assets/icons/goal.png
-    - assets/icons/watch_goal.png
-    - assets/icons/no_goal.png
-    - assets/icons/var.png
-    - assets/icons/substitution.png
-    - assets/background/background.png
-    - assets/background/match_details_background.png
-    - assets/background/watch_background.png
-  
-
