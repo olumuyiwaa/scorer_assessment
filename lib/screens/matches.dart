@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:match_detail_screen/screens/match_details.dart';
 
 import '../../components/match_card.dart';
@@ -14,11 +15,18 @@ class Matches extends StatefulWidget {
 
 class _MatchesState extends State<Matches> with TickerProviderStateMixin {
   late TabController _tabController;
-
+  final List<Map<String, String>> leagues = [
+    {'name': 'All', 'icon': 'assets/icons/0.svg'},
+    {'name': 'EPL', 'icon': 'assets/icons/1.png'},
+    {'name': 'La Liga', 'icon': 'assets/icons/2.png'},
+    {'name': 'Serie A', 'icon': 'assets/icons/3.png'},
+    {'name': 'Bundesliga', 'icon': 'assets/icons/4.png'},
+    {'name': 'Ligue 1', 'icon': 'assets/icons/5.png'},
+  ];
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = TabController(length: 3, vsync: this, initialIndex: 2);
   }
 
   @override
@@ -35,13 +43,14 @@ class _MatchesState extends State<Matches> with TickerProviderStateMixin {
           leading: const Icon(
             Icons.menu,
           ),
+          title: Image.asset('assets/icons/scorers.png', height: 38),
           actions: [
             SizedBox(
               width: 132,
               height: 34,
               child: TextField(
                 style: const TextStyle(color: Colors.white),
-                cursorColor: const Color(0xFF008F8F),
+                cursorColor: const Color(0xFFFFFFFF),
                 decoration: InputDecoration(
                   isDense: true,
                   filled: true,
@@ -49,14 +58,14 @@ class _MatchesState extends State<Matches> with TickerProviderStateMixin {
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
-                      color: Color(0xFF828282),
+                      color: Color(0xFFFFFFFF),
                     ),
                   ),
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: const BorderSide(
                       width: 1,
-                      color: Color(0xFF828282),
+                      color: Color(0xFFFFFFFF),
                     ),
                   ),
                   prefixIcon: const Icon(
@@ -85,6 +94,7 @@ class _MatchesState extends State<Matches> with TickerProviderStateMixin {
                       pinned: true,
                       flexibleSpace: FlexibleSpaceBar(
                         background: Container(
+                          alignment: Alignment.bottomCenter,
                           decoration: const BoxDecoration(
                             color: Color(0XFF002929),
                             image: DecorationImage(
@@ -94,9 +104,42 @@ class _MatchesState extends State<Matches> with TickerProviderStateMixin {
                             ),
                           ),
                           padding: const EdgeInsets.symmetric(
-                              horizontal: 16, vertical: 12),
-                          child: const Column(
-                            children: [],
+                              horizontal: 16, vertical: 72),
+                          child: Column(
+                            children: [
+                              const Spacer(),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: leagues.map((league) {
+                                  return Column(
+                                    children: [
+                                      Container(
+                                        width: 52,
+                                        height: 52,
+                                        padding: EdgeInsets.all(8),
+                                        decoration: BoxDecoration(
+                                            borderRadius:
+                                                BorderRadius.circular(50),
+                                            color: Color(0XFF1D1D1D)),
+                                        child: league['icon']!.endsWith('.svg')
+                                            ? SvgPicture.asset(league['icon']!,
+                                                width: 32.0, height: 32.0)
+                                            : Image.asset(league['icon']!,
+                                                width: 32.0, height: 32.0),
+                                      ),
+                                      SizedBox(
+                                        height: 4,
+                                      ),
+                                      Text(league['name']!,
+                                          style: const TextStyle(
+                                              fontSize: 14,
+                                              color: Colors.white))
+                                    ],
+                                  );
+                                }).toList(),
+                              )
+                            ],
                           ),
                         ),
                       ),

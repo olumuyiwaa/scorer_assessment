@@ -13,8 +13,11 @@ class MatchCurrentStatCard extends StatelessWidget {
   final String homeLogo;
   final String awayLogo;
 
-  const MatchCurrentStatCard(
-      {super.key, required this.homeLogo, required this.awayLogo});
+  const MatchCurrentStatCard({
+    super.key,
+    required this.homeLogo,
+    required this.awayLogo,
+  });
 
   @override
   Widget build(BuildContext context) {

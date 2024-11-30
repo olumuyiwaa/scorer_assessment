@@ -27,7 +27,17 @@ class CustomBottomNavigationBar extends StatelessWidget {
         _buildBottomNavItem('matches.svg', 'Matches', currentIndex, 1),
         _buildBottomNavItem('fantasy.svg', 'Fantasy', currentIndex, 2),
         _buildBottomNavItem('shop.svg', 'Shop', currentIndex, 3),
-        _buildBottomNavItem('user.png', 'My Profile', currentIndex, 4),
+        BottomNavigationBarItem(
+          icon: Padding(
+            padding: const EdgeInsets.only(bottom: 4),
+            child: Image.asset(
+              'assets/icons/user.png',
+              width: 24.0,
+              height: 24.0,
+            ),
+          ),
+          label: 'My Profile',
+        )
       ],
     );
   }

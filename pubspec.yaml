@@ -67,8 +67,15 @@ flutter:
       - assets/icons/matches.svg
       - assets/icons/fantasy.svg
       - assets/icons/shop.svg
-      - assets/icons/user.svg
+      - assets/icons/user.png
       - assets/icons/time.svg
+      - assets/icons/0.svg
+      - assets/icons/1.png
+      - assets/icons/2.png
+      - assets/icons/3.png
+      - assets/icons/4.png
+      - assets/icons/5.png
+      - assets/icons/scorers.png
       - assets/icons/ball.svg
       - assets/icons/clock.svg
       - assets/icons/location.svg
