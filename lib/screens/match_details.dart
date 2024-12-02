@@ -168,7 +168,7 @@ class _MatchDetailsState extends State<MatchDetails>
                                                     ]),
                                                   ),
                                                   SizedBox(
-                                                      width: 98,
+                                                      width: 58,
                                                       child: Expanded(
                                                           child: Column(
                                                         children: [
