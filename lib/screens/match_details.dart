@@ -138,15 +138,13 @@ class _MatchDetailsState extends State<MatchDetails>
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           children: [
-                                            Expanded(
-                                                child: Row(
-                                                    crossAxisAlignment:
-                                                        CrossAxisAlignment
-                                                            .start,
-                                                    mainAxisAlignment:
-                                                        MainAxisAlignment
-                                                            .spaceBetween,
-                                                    children: [
+                                            Row(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
+                                                mainAxisAlignment:
+                                                    MainAxisAlignment
+                                                        .spaceBetween,
+                                                children: [
                                                   SizedBox(
                                                     width: 98,
                                                     child: Column(children: [
@@ -171,7 +169,8 @@ class _MatchDetailsState extends State<MatchDetails>
                                                   ),
                                                   SizedBox(
                                                       width: 98,
-                                                      child: Column(
+                                                      child: Expanded(
+                                                          child: Column(
                                                         children: [
                                                           Text(
                                                             textAlign: TextAlign
@@ -194,10 +193,12 @@ class _MatchDetailsState extends State<MatchDetails>
                                                                   color: Color(
                                                                       0XFF828282))),
                                                         ],
-                                                      )),
+                                                      ))),
                                                   SizedBox(
                                                     width: 98,
-                                                    child: Column(children: [
+                                                    child: Expanded(
+                                                        child:
+                                                            Column(children: [
                                                       Image.memory(
                                                         awayLogo,
                                                         height: 50,
@@ -215,9 +216,9 @@ class _MatchDetailsState extends State<MatchDetails>
                                                           color: Colors.white,
                                                         ),
                                                       ),
-                                                    ]),
+                                                    ])),
                                                   )
-                                                ])),
+                                                ]),
                                             SvgPicture.asset(
                                               'assets/icons/ball.svg',
                                               width: 24.0,
@@ -283,7 +284,7 @@ class _MatchDetailsState extends State<MatchDetails>
                                                                         4),
                                                             child: Text(
                                                               "${incident['playerName']} ${incident['time']}'",
-                                                              style: TextStyle(
+                                                              style: const TextStyle(
                                                                   color: Colors
                                                                       .white),
                                                             ),
