@@ -112,31 +112,33 @@ class _MatchesState extends State<Matches> with TickerProviderStateMixin {
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: leagues.map((league) {
-                                  return Column(
+                                  return Expanded(
+                                      child: Column(
                                     children: [
                                       Container(
                                         width: 52,
                                         height: 52,
-                                        padding: EdgeInsets.all(8),
+                                        padding: const EdgeInsets.all(8),
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(50),
-                                            color: Color(0XFF1D1D1D)),
+                                            color: const Color(0XFF1D1D1D)),
                                         child: league['icon']!.endsWith('.svg')
                                             ? SvgPicture.asset(league['icon']!,
                                                 width: 32.0, height: 32.0)
                                             : Image.asset(league['icon']!,
                                                 width: 32.0, height: 32.0),
                                       ),
-                                      SizedBox(
+                                      const SizedBox(
                                         height: 4,
                                       ),
                                       Text(league['name']!,
+                                          maxLines: 1,
                                           style: const TextStyle(
-                                              fontSize: 14,
+                                              fontSize: 11,
                                               color: Colors.white))
                                     ],
-                                  );
+                                  ));
                                 }).toList(),
                               )
                             ],

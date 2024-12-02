@@ -198,6 +198,8 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                         Expanded(
                                                                             child:
                                                                                 Text(
+                                                                          textAlign:
+                                                                              TextAlign.end,
                                                                           incident[
                                                                               'playerName'],
                                                                           style:
@@ -374,6 +376,8 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                     ? Expanded(
                                                                         child:
                                                                             Column(
+                                                                        crossAxisAlignment:
+                                                                            CrossAxisAlignment.start,
                                                                         children: [
                                                                           Text(
                                                                             incident['playerIn'],
@@ -527,6 +531,8 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                     ? Expanded(
                                                                         child:
                                                                             Column(
+                                                                        crossAxisAlignment:
+                                                                            CrossAxisAlignment.end,
                                                                         children: [
                                                                           Text(
                                                                             incident['playerIn'],
@@ -543,6 +549,8 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                     : Expanded(
                                                                         child:
                                                                             Text(
+                                                                        textAlign:
+                                                                            TextAlign.end,
                                                                         incident[
                                                                             'playerName'],
                                                                         style: const TextStyle(
