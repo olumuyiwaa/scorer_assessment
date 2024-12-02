@@ -195,12 +195,14 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                         const SizedBox(
                                                                             width:
                                                                                 8),
-                                                                        Text(
+                                                                        Expanded(
+                                                                            child:
+                                                                                Text(
                                                                           incident[
                                                                               'playerName'],
                                                                           style:
                                                                               const TextStyle(letterSpacing: -0.5),
-                                                                        ),
+                                                                        )),
                                                                         const SizedBox(
                                                                             width:
                                                                                 4),
@@ -266,12 +268,14 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                           width:
                                                                               8,
                                                                         ),
-                                                                        Text(
+                                                                        Expanded(
+                                                                            child:
+                                                                                Text(
                                                                           incident[
                                                                               'playerName'],
                                                                           style:
                                                                               const TextStyle(letterSpacing: -0.5),
-                                                                        ),
+                                                                        )),
                                                                       ],
                                                                     )),
                                                                 const SizedBox(
@@ -367,7 +371,9 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                 ),
                                                                 (incident['incidentType'] ==
                                                                         'substitution')
-                                                                    ? Column(
+                                                                    ? Expanded(
+                                                                        child:
+                                                                            Column(
                                                                         children: [
                                                                           Text(
                                                                             incident['playerIn'],
@@ -380,14 +386,16 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                                 const TextStyle(letterSpacing: -0.5, color: Colors.red),
                                                                           ),
                                                                         ],
-                                                                      )
-                                                                    : Text(
+                                                                      ))
+                                                                    : Expanded(
+                                                                        child:
+                                                                            Text(
                                                                         incident[
                                                                             'playerName'],
                                                                         style: const TextStyle(
                                                                             letterSpacing:
                                                                                 -0.5),
-                                                                      ),
+                                                                      )),
                                                               ],
                                                             )),
                                                         const SizedBox(
@@ -516,7 +524,9 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                     width: 8),
                                                                 (incident['incidentType'] ==
                                                                         'substitution')
-                                                                    ? Column(
+                                                                    ? Expanded(
+                                                                        child:
+                                                                            Column(
                                                                         children: [
                                                                           Text(
                                                                             incident['playerIn'],
@@ -529,14 +539,16 @@ class MatchCurrentStatCard extends StatelessWidget {
                                                                                 const TextStyle(letterSpacing: -0.5, color: Colors.red),
                                                                           ),
                                                                         ],
-                                                                      )
-                                                                    : Text(
+                                                                      ))
+                                                                    : Expanded(
+                                                                        child:
+                                                                            Text(
                                                                         incident[
                                                                             'playerName'],
                                                                         style: const TextStyle(
                                                                             letterSpacing:
                                                                                 -0.5),
-                                                                      ),
+                                                                      )),
                                                                 const SizedBox(
                                                                     width: 4),
                                                                 Container(

@@ -138,13 +138,15 @@ class _MatchDetailsState extends State<MatchDetails>
                                           crossAxisAlignment:
                                               CrossAxisAlignment.center,
                                           children: [
-                                            Row(
-                                                crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
-                                                mainAxisAlignment:
-                                                    MainAxisAlignment
-                                                        .spaceBetween,
-                                                children: [
+                                            Expanded(
+                                                child: Row(
+                                                    crossAxisAlignment:
+                                                        CrossAxisAlignment
+                                                            .start,
+                                                    mainAxisAlignment:
+                                                        MainAxisAlignment
+                                                            .spaceBetween,
+                                                    children: [
                                                   SizedBox(
                                                     width: 98,
                                                     child: Column(children: [
@@ -193,8 +195,9 @@ class _MatchDetailsState extends State<MatchDetails>
                                                                       0XFF828282))),
                                                         ],
                                                       )),
-                                                  Column(
-                                                    children: [
+                                                  SizedBox(
+                                                    width: 98,
+                                                    child: Column(children: [
                                                       Image.memory(
                                                         awayLogo,
                                                         height: 50,
@@ -204,15 +207,17 @@ class _MatchDetailsState extends State<MatchDetails>
                                                         height: 4,
                                                       ),
                                                       Text(
-                                                          '${event['awayTeam']['name']}',
-                                                          style:
-                                                              const TextStyle(
-                                                                  fontSize: 16,
-                                                                  color: Colors
-                                                                      .white))
-                                                    ],
+                                                        textAlign:
+                                                            TextAlign.center,
+                                                        '${event['awayTeam']['name']}',
+                                                        style: const TextStyle(
+                                                          fontSize: 16,
+                                                          color: Colors.white,
+                                                        ),
+                                                      ),
+                                                    ]),
                                                   )
-                                                ]),
+                                                ])),
                                             SvgPicture.asset(
                                               'assets/icons/ball.svg',
                                               width: 24.0,
